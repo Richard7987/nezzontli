@@ -3,15 +3,16 @@
   "version": "2.2.0",
   "private": true,
   "scripts": {
-    "start": "next dev",
-    "dev": "prisma generate && cross-env INIT_CWD=$PWD next dev",
-    "build": "prisma generate && prisma db push && cross-env INIT_CWD=$PWD next build && cross-env NODE_OPTIONS='--experimental-json-modules' node ./scripts/postbuild.mjs",
-    "serve": "next start",
-    "analyze": "cross-env ANALYZE=true next build",
-    "lint": "next lint --fix --dir pages --dir app --dir components --dir lib --dir layouts --dir scripts",
-    "prepare": "husky",
-    "email": "email dev"
-  },
+  "start": "next dev",
+  "dev": "prisma generate && cross-env INIT_CWD=$PWD next dev",
+  "build": "prisma generate && prisma db push && cross-env INIT_CWD=$PWD next build && cross-env NODE_OPTIONS='--experimental-json-modules' node ./scripts/postbuild.mjs",
+  "serve": "next start",
+  "analyze": "cross-env ANALYZE=true next build",
+  "lint": "next lint --fix --dir pages --dir app --dir components --dir lib --dir layouts --dir scripts",
+  "prepare": "husky",
+  "email": "email dev",
+  "vercel-build": "prisma generate && next build"
+},
   "dependencies": {
     "@auth/prisma-adapter": "^2.2.0",
     "@hookform/resolvers": "^3.6.0",
