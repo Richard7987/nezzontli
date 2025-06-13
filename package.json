@@ -11,7 +11,7 @@
   "lint": "next lint --fix --dir pages --dir app --dir components --dir lib --dir layouts --dir scripts",
   "prepare": "husky",
   "email": "email dev",
-  "vercel-build": "NODE_OPTIONS=\'--experimental-json-modules\' prisma generate && next build"
+  "vercel-build": "NODE_OPTIONS=\"--experimental-json-modules\" prisma generate && next build"
 },
   "dependencies": {
     "@auth/prisma-adapter": "^2.2.0",
